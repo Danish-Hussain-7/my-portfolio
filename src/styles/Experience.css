@@ -1,0 +1,8 @@
+.experience-container {
+    background: radial-gradient(circle, rgba(128,128,128,1) 30%, rgb(0, 0, 0) 100%) fixed;
+    min-height: 100vh; /* Ensure it covers the full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* Adjust padding as needed */
+  }
