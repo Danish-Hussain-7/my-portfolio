@@ -2,7 +2,7 @@
   width: 100%;
   height: 100px;
   background: #808080;
-  border-bottom: 5px solid #ffffff
+  border-bottom: 5px solid #ffffff;
 }
 
 .links {
@@ -12,21 +12,21 @@
   align-items: center;
   justify-content: center;
   gap: 450px;
-  color: #00d9ff; 
+  color: #00d9ff;
 }
 
 .navbar a {
-  color: #ffffff; 
+  color: #ffffff;
   text-decoration: none;
   margin: 20px;
-  font-size:1.5vw;
+  font-size: 1.5vw;
   font-weight: 800;
-  transition: color 0.3s ease, text-decoration 0.3s ease; 
+  transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
 .navbar a:hover {
-  color: #00d9ff; 
-  text-decoration: underline; 
+  color: #00d9ff;
+  text-decoration: underline;
 }
 
 .toggleButton {
@@ -40,6 +40,7 @@
 .toggleButton svg {
   font-size: 50px;
 }
+
 .toggleButton button {
   margin-right: 20px;
   background-color: transparent;
@@ -48,6 +49,7 @@
   cursor: pointer;
 }
 
+/* For mobile view */
 #open {
   height: 100vh;
 }
@@ -66,16 +68,46 @@
 @media only screen and (max-width: 900px) {
   .navbar a {
     width: 70px;
-    font-size: 4vw;
+    font-size: 4vw; /* Adjust font size for small screens */
+  }
+
+  /* Make the links stack vertically on smaller screens */
+  .links {
+    gap: 20px; /* Reduced gap on small screens */
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  /* Hide the toggle button on larger screens */
+  .toggleButton {
+    display: none;
   }
 }
 
 @media only screen and (max-width: 600px) {
   .toggleButton {
-    display: flex;
+    display: block; /* Show toggle button on small screens */
   }
-  #close a {
+
+  /* For small screens, make navbar a full-width mobile menu */
+  #open .links {
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 20px;
+  }
+
+  .navbar a {
+    font-size: 5vw; /* Increase font size for easier readability */
+    margin: 10px 0; /* Add spacing between links */
+  }
+
+  /* Mobile-only view, hide non-mobile elements */
+  .hiddenLinks {
     display: none;
+  }
+
+  #close a {
+    display: block; /* Make the 'close' button visible */
   }
 }
 
@@ -85,7 +117,7 @@
   }
 
   .hiddenLinks {
-    display: none;
+    display: block;
   }
 
   #open {
@@ -96,3 +128,4 @@
     flex-direction: row;
   }
 }
+

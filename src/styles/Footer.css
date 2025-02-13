@@ -9,8 +9,7 @@
   padding-top: 10px;
   margin-top: auto;
   font-size: 1vw;
-  border-top: 5px solid #ffffff
-
+  border-top: 5px solid #ffffff;
 }
 
 .socialMedia svg {
@@ -26,7 +25,20 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .footer svg {
-    font-size: 4vw;
+  /* Adjust footer styling for mobile view */
+  .footer {
+    height: auto; /* Allow footer height to adjust based on content */
+    padding-top: 20px; /* Add some spacing to top */
+    font-size: 4vw; /* Adjust font size for small screens */
+  }
+
+  .socialMedia svg {
+    font-size: 15vw; /* Increase icon size for better visibility */
+    margin: 10px; /* Adjust spacing for icons */
+  }
+
+  .footer p {
+    font-size: 4vw; /* Make text larger on mobile */
+    margin-top: 10px; /* Add spacing between text and icons */
   }
 }

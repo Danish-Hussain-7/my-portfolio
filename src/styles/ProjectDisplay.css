@@ -6,7 +6,6 @@
   align-items: center;
   flex-direction: column;
   background: radial-gradient(circle, rgba(128,128,128,1) 30%, rgb(0, 0, 0) 100%) fixed;
-
 }
 
 .project h1 {
@@ -14,6 +13,7 @@
   color: #ffffff;
   font-size: 35px;
 }
+
 .project img {
   width: 40vw;
   border-radius: 10px;
@@ -27,4 +27,29 @@
 .project svg {
   font-size: 60px;
   color: #ffffff;
+}
+
+@media only screen and (max-width: 768px) {
+  /* Adjust project section for smaller screens */
+  .project h1 {
+    font-size: 5vw; /* Adjust title font size */
+    margin-top: 30px; /* Adjust spacing above the title */
+  }
+
+  .project img {
+    width: 70vw; /* Increase image size on mobile */
+    max-width: 90%; /* Ensure image doesn't overflow */
+    margin-top: 20px; /* Add spacing between title and image */
+  }
+
+  .project p {
+    font-size: 6vw; /* Make text more readable on mobile */
+    text-align: center; /* Center text for mobile devices */
+    margin-top: 20px; /* Add spacing above paragraph */
+  }
+
+  .project svg {
+    font-size: 8vw; /* Scale down icons for smaller screens */
+    margin-top: 20px; /* Add spacing between paragraph and icon */
+  }
 }
